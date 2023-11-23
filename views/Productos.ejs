@@ -1,0 +1,32 @@
+<%- include('template/cabecera',{tituloweb : 'Productos' })  %>
+
+    <div class="container">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Accion  </th>
+              </tr>
+            </thead>
+            <tbody>
+
+                <% if (ArrayProductos.length > 0) { %>
+    
+                    <% ArrayProductos.forEach(productos  => { %>
+                        <tr>
+                            <th scope="row"><%= productos.id %></th>
+                            <td><%= productos.nombre%></td>
+                            <td><%= productos.descripcion %></td>
+                            <td>@mdo</td>
+                        </tr>
+                    <% }) %>
+                   <% } %>
+
+            </tbody>
+          </table>
+    
+    </div>
+
+<%- include('template/footer') %>
